@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333333;
+  background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Fraunces', serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F4EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #5B3A8E;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4C3079;
+}
+
+/* Thread motif - signature element */
+.thread-line {
+  position: relative;
+}
+.thread-line::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4AF37 20%, #D4AF37 80%, transparent);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.container-page {
+  @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12;
+}
+
+.section-pad {
+  @apply py-16 md:py-24;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 bg-purple text-white font-medium px-7 py-3.5 rounded-full shadow-soft hover:bg-purple-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+}
+
+.btn-gold {
+  @apply inline-flex items-center justify-center gap-2 bg-gold text-purple-900 font-semibold px-7 py-3.5 rounded-full shadow-soft hover:bg-gold-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 border-2 border-purple text-purple font-medium px-7 py-3.5 rounded-full hover:bg-purple hover:text-white transition-all duration-300;
+}
+
+.btn-outline-light {
+  @apply inline-flex items-center justify-center gap-2 border-2 border-white text-white font-medium px-7 py-3.5 rounded-full hover:bg-white hover:text-purple transition-all duration-300;
+}
+
+.eyebrow {
+  @apply text-gold-600 font-semibold uppercase tracking-[0.18em] text-xs md:text-sm;
+}
+
+/* Scroll Reveal Global Utility */
+.section-reveal-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.section-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
