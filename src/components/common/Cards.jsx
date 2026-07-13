@@ -5,8 +5,8 @@ export function IconCard({ icon, title, description, delay = 0 }) {
   const Icon = Fa6[icon] || Fa6.FaHeart
   return (
     <Reveal delay={delay}>
-      <div className="group bg-white border border-purple-100 rounded-2xl p-7 h-full shadow-card hover:shadow-soft hover:-translate-y-1.5 transition-all duration-300">
-        <div className="w-14 h-14 rounded-xl bg-purple-50 flex items-center justify-center mb-5 group-hover:bg-purple group-hover:text-white text-purple transition-colors duration-300">
+      <div className="group bg-white border border-purple-100 rounded-2xl p-7 h-full shadow-card hover:shadow-soft hover:-translate-y-1.5 transition-all duration-300 hover:border-emerald-200">
+        <div className="w-14 h-14 rounded-xl bg-purple-50 flex items-center justify-center mb-5 group-hover:bg-emerald-700 group-hover:text-white text-purple transition-colors duration-300">
           <Icon size={26} />
         </div>
         <h3 className="font-display font-semibold text-xl text-purple-900 mb-2">{title}</h3>

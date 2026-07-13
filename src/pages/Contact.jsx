@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaLocationDot, FaPhone, FaEnvelope, FaCircleCheck, FaPaperPlane, FaFacebookF, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6'
+import { FaLocationDot, FaPhone, FaEnvelope, FaCircleCheck, FaPaperPlane, FaFacebookF, FaInstagram, FaXTwitter } from 'react-icons/fa6'
 import PageHero from '../components/common/PageHero'
 import SectionHeading from '../components/common/SectionHeading'
 import Reveal from '../components/common/Reveal'
@@ -96,7 +96,7 @@ export default function Contact() {
 
       {/* Contact Form */}
       <section className="section-pad bg-white">
-        <div className="container-page grid md:grid-cols-2 gap-12">
+        <div className="container-page grid lg:grid-cols-2 gap-12">
           <Reveal className="flex flex-col h-full justify-between">
             <div>
               <SectionHeading eyebrow="Send a Message" title="Get in touch" />
@@ -109,14 +109,15 @@ export default function Contact() {
               <p className="text-sm text-ink/65 mb-4 font-body">Follow our journey and see the direct impact of your support.</p>
               <div className="flex gap-3">
                 {[
-                  { Icon: FaFacebookF, label: 'Facebook' },
-                  { Icon: FaInstagram, label: 'Instagram' },
-                  { Icon: FaXTwitter, label: 'Twitter' },
-                  { Icon: FaYoutube, label: 'YouTube' }
-                ].map(({ Icon, label }, i) => (
+                  { Icon: FaFacebookF, label: 'Facebook', href: 'https://www.facebook.com/VAIWM' },
+                  { Icon: FaInstagram, label: 'Instagram', href: 'https://www.instagram.com/victoriaalabaster007/' },
+                  { Icon: FaXTwitter, label: 'Twitter', href: 'https://x.com/VictoriaAlabast' }
+                ].map(({ Icon, label, href }, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={`Connect with us on ${label}`}
                     className="w-10 h-10 rounded-full bg-purple-50 text-purple hover:bg-gold hover:text-purple-900 flex items-center justify-center transition-colors duration-300"
                   >

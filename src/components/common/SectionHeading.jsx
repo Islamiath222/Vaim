@@ -19,7 +19,11 @@ export default function SectionHeading({
       >
         {title}
       </h2>
-      <ThreadDivider className="w-24 h-4 mt-5" color={light ? '#D4AF37' : '#D4AF37'} />
+      <div className="mt-5 flex items-center gap-1.5">
+        <div className="h-1 w-10 rounded-full bg-emerald-600" />
+        <div className="h-1 w-5 rounded-full bg-gold" />
+        <div className="h-1 w-2 rounded-full bg-emerald-300" />
+      </div>
       {description && (
         <p className={`mt-5 text-base md:text-lg leading-relaxed ${light ? 'text-white/85' : 'text-ink/75'}`}>
           {description}

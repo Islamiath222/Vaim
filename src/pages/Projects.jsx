@@ -1,26 +1,9 @@
 import PageHero from '../components/common/PageHero'
 import SectionHeading from '../components/common/SectionHeading'
 import Reveal from '../components/common/Reveal'
-import VisualPlaceholder from '../components/common/VisualPlaceholder'
 import { FaCircleCheck } from 'react-icons/fa6'
 import { projects, futureInitiatives } from '../data/content'
-
-function ProgressBar({ value }) {
-  return (
-    <div>
-      <div className="flex justify-between text-xs font-medium text-purple-900/70 mb-2">
-        <span>Funding Progress</span>
-        <span>{value}%</span>
-      </div>
-      <div className="h-2.5 w-full bg-purple-100 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-gradient-to-r from-gold-400 to-gold-600 rounded-full transition-all duration-1000"
-          style={{ width: `${value}%` }}
-        />
-      </div>
-    </div>
-  )
-}
+import heroProjects from '../assets/hero_projects_1783098696615.png'
 
 export default function Projects() {
   return (
@@ -29,6 +12,7 @@ export default function Projects() {
         eyebrow="Our Projects"
         title="Building the infrastructure of lasting change"
         description="Two flagship projects are underway right now — each addressing a critical, long-term gap in the safety net for the women and families we serve."
+        image={heroProjects}
       />
 
       <section className="section-pad bg-white">
@@ -36,12 +20,17 @@ export default function Projects() {
           {projects.map((project, i) => (
             <Reveal key={project.id} delay={i * 0.1}>
               <div
-                className={`grid md:grid-cols-2 gap-10 items-center ${
-                  i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''
+                className={`grid lg:grid-cols-2 gap-10 items-center ${
+                  i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''
                 }`}
               >
                 <div className="h-72 md:h-[420px] rounded-3xl overflow-hidden shadow-soft">
-                  <VisualPlaceholder variant={project.image} rounded="rounded-none" className="h-full" />
+                  <img 
+                    src={project.imgSrc} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover filter contrast-[1.03] brightness-[1.01] saturate-[1.02]" 
+                    style={{ imageRendering: 'high-quality' }}
+                  />
                 </div>
                 <div>
                   <span className="eyebrow">Ongoing Project</span>
@@ -66,8 +55,6 @@ export default function Projects() {
                     Expected Impact
                   </h4>
                   <p className="text-sm text-ink/75 leading-relaxed mb-6">{project.impact}</p>
-
-                  <ProgressBar value={project.progress} />
                 </div>
               </div>
             </Reveal>

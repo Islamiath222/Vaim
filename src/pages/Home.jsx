@@ -4,17 +4,17 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaArrowRight, FaCircleCheck, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import Reveal from '../components/common/Reveal'
 import SectionHeading from '../components/common/SectionHeading'
-import VisualPlaceholder from '../components/common/VisualPlaceholder'
 import { ThreadFlourish } from '../components/common/ThreadMotif'
 import { IconCard } from '../components/common/Cards'
+import ImageLightbox from '../components/common/ImageLightbox'
 import { supportAreas, projects, galleryItems } from '../data/content';
 import heroBg from '../assets/hero_bg.png';
-import heroSlide2 from '../assets/hero_slide_2.png';
-import heroSlide3 from '../assets/hero_slide_3.png';
+import heroSlide2 from '../assets/hero_slide_2_new.jpg';
+import heroSlide3 from '../assets/hero_slide_3_new.jpg';
 import womanImg from '../assets/victoria_main.jpg';
 import whoWeAreImg from '../assets/who_we_are.jpg';
-import projectOfficeImg from '../assets/project_office.png';
-import projectShelterImg from '../assets/project_shelter.png';
+import projectOfficeImg from '../assets/project_community_center.jpg';
+import projectShelterImg from '../assets/project_empowerment.jpg';
 
 const projectImages = {
   office: projectOfficeImg,
@@ -25,6 +25,8 @@ const projectImages = {
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [lightboxItem, setLightboxItem] = useState(null);
+  const [projectLightbox, setProjectLightbox] = useState(null);
 
   const slides = [
     {
@@ -62,7 +64,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section 
-        className="relative overflow-hidden pt-28 md:pt-0 group"
+        className="relative overflow-hidden group min-h-[600px] md:min-h-[720px]"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={() => setIsPaused(true)}
@@ -80,7 +82,7 @@ export default function Home() {
           />
         </AnimatePresence>
 
-        <div className="container-page grid md:grid-cols-2 gap-10 items-center min-h-[640px] md:min-h-[720px] py-12 md:py-0">
+        <div className="container-page grid lg:grid-cols-2 gap-10 items-center min-h-[640px] md:min-h-[720px] py-12 md:py-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -90,7 +92,7 @@ export default function Home() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="relative z-10"
             >
-              <span className="eyebrow text-purple-600">Victoria Alabaster International Women Ministry</span>
+              <span className="eyebrow drop-shadow-md" style={{ color: '#ffffff' }}>Victoria-Alabaster International Women Ministry</span>
               <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl text-white mt-4 leading-[1.08] text-balance drop-shadow-md">
                 {slides[currentSlide].title}
               </h1>
@@ -102,7 +104,7 @@ export default function Home() {
                   Learn More
                 </Link>
                 <Link to="/donate" className="btn-gold">
-                  Donate Now
+                  Donate Here
                 </Link>
               </div>
             </motion.div>
@@ -116,9 +118,13 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 1.05 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl"
+                className={`absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl ${currentSlide === 0 ? '' : 'bg-black/20'}`}
               >
-                <img src={slides[currentSlide].fgImage} alt="Happy Black women in church" className="h-full w-full object-cover" />
+                <img 
+                  src={slides[currentSlide].fgImage} 
+                  alt="Happy Black women in church" 
+                  className={`h-full w-full ${currentSlide === 0 ? 'object-cover' : 'object-contain'}`} 
+                />
               </motion.div>
             </AnimatePresence>
             <ThreadFlourish className="hidden md:block absolute z-20 -bottom-6 -left-10 w-24 h-24" />
@@ -156,11 +162,12 @@ export default function Home() {
         </div>
 
         <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-purple-600/30 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-emerald-700/20 blur-3xl pointer-events-none" />
       </section>
 
       {/* ABOUT PREVIEW */}
       <section className="section-pad bg-white">
-        <div className="container-page grid md:grid-cols-2 gap-12 items-center">
+        <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
           <Reveal>
             <div className="relative h-72 md:h-96">
               <img src={whoWeAreImg} alt="Community hands joined together" className="w-full h-full object-cover rounded-3xl shadow-card" />
@@ -208,17 +215,26 @@ export default function Home() {
             title="Building toward a lasting future"
             description="Two flagship initiatives are currently underway, each addressing a critical, long-term gap in our community's safety net."
           />
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, i) => (
               <Reveal key={project.id} delay={i * 0.1}>
                 <div className="group bg-beige rounded-2xl overflow-hidden shadow-card hover:shadow-soft transition-shadow duration-300 h-full flex flex-col">
-                  <div className="h-56 overflow-hidden">
+                  {/* Clickable image */}
+                  <button
+                    className={`w-full overflow-hidden cursor-zoom-in focus:outline-none ${i === 1 ? 'bg-black/10' : ''}`}
+                    style={{ height: i === 1 ? 'auto' : '14rem' }}
+                    onClick={() => setProjectLightbox({ image: projectImages[project.image], title: project.title })}
+                    aria-label={`View full image: ${project.title}`}
+                  >
                     <img
                       src={projectImages[project.image]}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className={`w-full group-hover:scale-105 transition-transform duration-500 filter contrast-[1.03] brightness-[1.01] saturate-[1.02] ${
+                        i === 1 ? 'object-contain max-h-72' : 'h-full object-cover'
+                      }`}
+                      style={{ imageRendering: 'high-quality' }}
                     />
-                  </div>
+                  </button>
                   <div className="p-7 flex flex-col flex-grow">
                     <h3 className="font-display font-semibold text-xl text-purple-900 mb-2">
                       {project.title}
@@ -238,6 +254,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Project image lightbox */}
+      <ImageLightbox item={projectLightbox} onClose={() => setProjectLightbox(null)} />
+
       {/* RECENT ACTIVITIES */}
       <section className="section-pad bg-beige">
         <div className="container-page">
@@ -249,14 +268,18 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {galleryItems.slice(0, 6).map((item, i) => (
               <Reveal key={item.id} delay={(i % 3) * 0.08}>
-                <div className="relative aspect-square rounded-2xl overflow-hidden group cursor-pointer">
+                <button
+                  onClick={() => setLightboxItem(item)}
+                  className="relative aspect-square rounded-2xl overflow-hidden group cursor-pointer w-full text-left"
+                  aria-label={`View image: ${item.title}`}
+                >
                   <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-purple-900/20 group-hover:bg-purple-900/50 transition-colors duration-300 flex items-end p-4">
                     <p className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                       {item.title}
                     </p>
                   </div>
-                </div>
+                </button>
               </Reveal>
             ))}
           </div>
@@ -267,6 +290,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ImageLightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
 
       {/* DONATION CTA */}
       <section className="relative bg-purple-900 section-pad overflow-hidden">
@@ -282,7 +307,7 @@ export default function Home() {
               and empowerment programs for women and families who need it most.
             </p>
             <Link to="/donate" className="btn-gold mt-8 inline-flex">
-              Donate Now <FaArrowRight />
+              Donate Here <FaArrowRight />
             </Link>
           </Reveal>
         </div>

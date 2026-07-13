@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { FaBars, FaXmark, FaFacebookF, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6'
+import { FaBars, FaXmark, FaFacebookF, FaInstagram, FaXTwitter } from 'react-icons/fa6'
 import { motion, AnimatePresence } from 'framer-motion'
 import Logo from './Logo';
 import { navLinks } from '../../data/content';
@@ -10,7 +10,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 12)
+    const handleScroll = () => setScrolled(window.scrollY > 30)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -22,18 +22,12 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-card' : 'bg-white/90 backdrop-blur-sm'
+        scrolled ? 'bg-white/95 backdrop-blur-md shadow-card h-20' : 'bg-white/90 backdrop-blur-sm h-26'
       }`}
     >
-      <nav className="container-page flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-2.5 group" onClick={() => setIsOpen(false)}>
-          <Logo />
-          <span className="font-display font-semibold text-purple-900 leading-tight text-base sm:text-lg">
-            Victoria Alabaster
-            <span className="block text-[10px] sm:text-xs font-body font-medium text-purple-600 tracking-wide uppercase">
-              International Women Ministry
-            </span>
-          </span>
+      <nav className="w-full flex items-center justify-between h-full py-1 pl-0 pr-5 sm:pr-8 lg:pr-12">
+        <Link to="/" className="flex items-center group w-50 sm:w-44 shrink-0 justify-start -ml-5 sm:-ml-7 lg:-ml-9" onClick={() => setIsOpen(false)}>
+          <Logo className="h-20 object-left" />
         </Link>
 
         {/* Desktop Nav */}
@@ -56,14 +50,15 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-5">
           <div className="flex gap-2">
             {[
-              { Icon: FaFacebookF, label: 'Facebook' },
-              { Icon: FaInstagram, label: 'Instagram' },
-              { Icon: FaXTwitter, label: 'Twitter' },
-              { Icon: FaYoutube, label: 'YouTube' }
-            ].map(({ Icon, label }, i) => (
+              { Icon: FaFacebookF, label: 'Facebook', href: 'https://www.facebook.com/VAIWM' },
+              { Icon: FaInstagram, label: 'Instagram', href: 'https://www.instagram.com/victoriaalabaster007/' },
+              { Icon: FaXTwitter, label: 'Twitter', href: 'https://x.com/VictoriaAlabast' }
+            ].map(({ Icon, label, href }, i) => (
               <a
                 key={i}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={`Connect with us on ${label}`}
                 className="w-8 h-8 rounded-full bg-purple-50 text-purple hover:bg-gold hover:text-purple-900 flex items-center justify-center transition-colors duration-300"
               >
@@ -72,7 +67,7 @@ export default function Navbar() {
             ))}
           </div>
           <Link to="/donate" className="btn-gold !px-6 !py-2.5 text-sm">
-            Donate Now
+            Donate Here
           </Link>
         </div>
 
@@ -113,16 +108,23 @@ export default function Navbar() {
                 </NavLink>
               ))}
 
+              <div className="mt-4 px-2">
+                <Link to="/donate" className="btn-gold w-full justify-center !py-3" onClick={() => setIsOpen(false)}>
+                  Donate Here
+                </Link>
+              </div>
+
               <div className="flex justify-center gap-4 mt-6 pt-5 border-t border-purple-100">
                 {[
-                  { Icon: FaFacebookF, label: 'Facebook' },
-                  { Icon: FaInstagram, label: 'Instagram' },
-                  { Icon: FaXTwitter, label: 'Twitter' },
-                  { Icon: FaYoutube, label: 'YouTube' }
-                ].map(({ Icon, label }, i) => (
+                  { Icon: FaFacebookF, label: 'Facebook', href: 'https://www.facebook.com/VAIWM' },
+                  { Icon: FaInstagram, label: 'Instagram', href: 'https://www.instagram.com/victoriaalabaster007/' },
+                  { Icon: FaXTwitter, label: 'Twitter', href: 'https://x.com/VictoriaAlabast' }
+                ].map(({ Icon, label, href }, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={`Connect with us on ${label}`}
                     className="w-10 h-10 rounded-full bg-purple-50 text-purple hover:bg-gold hover:text-purple-900 flex items-center justify-center transition-colors duration-300"
                   >

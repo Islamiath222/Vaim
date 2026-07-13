@@ -6,13 +6,19 @@ import imgGallery2 from '../assets/gallery2.jpg'
 import imgGallery3 from '../assets/gallery3.jpg'
 import imgGallery4 from '../assets/gallery4.jpg'
 import imgGallery5 from '../assets/gallery5.jpg'
-import imgNeedFood from '../assets/need_food_supplies.png'
+import imgGalleryLaptop from '../assets/gallery_laptop_donation.jpg'
+import imgGalleryCommunity from '../assets/gallery_community_meeting.jpg'
+import imgGallerySisterhood from '../assets/gallery_sisterhood.jpg'
+import imgGallerySchool from '../assets/gallery_school_uniform.jpg'
+import imgNeedFood from '../assets/need_food_supplies_new.jpg'
 import imgNeedClothing from '../assets/need_clothing.png'
 import imgNeedEssentials from '../assets/need_essentials.png'
+import imgProjectOffice from '../assets/project_community_center.jpg'
+import imgProjectShelter from '../assets/project_empowerment.jpg'
 
 export const siteInfo = {
-  name: 'Victoria Alabaster International Women Ministry',
-  shortName: 'Victoria Alabaster',
+  name: 'Victoria-Alabaster International Women Ministry',
+  shortName: 'Victoria-Alabaster IWM',
   tagline: 'Empowering Women, Transforming Communities',
   founded: 2014,
 }
@@ -56,34 +62,36 @@ export const supportAreas = [
 
 export const projects = [
   {
-    id: 'office-location',
-    title: 'Permanent Office Location',
+    id: 'community-center',
+    title: 'Women Support & Gathering Programs',
     image: 'office',
-    summary: 'A dedicated home base in Accra to coordinate programs, host trainings, and welcome the families we serve.',
+    imgSrc: imgProjectOffice,
+    summary: 'A supportive safe space where women connect, receive counseling, build community, and share child care support.',
     description:
-      'For years, our team has operated from temporary spaces and borrowed rooms. This project will establish a permanent administrative office and community center — a stable address where widows can collect support, youth can attend trainings, and our growing staff can coordinate outreach efficiently across all program areas.',
+      'We bring women, mothers, and children together in community safe spaces to receive emotional counseling, share resources, and build support networks. This project ensures widows and single mothers have a dedicated, structured environment to connect, learn from one another, and access child welfare and essential support services.',
     goals: [
-      'Secure a long-term facility in a central, accessible location',
-      'Create dedicated rooms for counseling, training, and storage of relief items',
-      'Provide a consistent, dignified space for beneficiaries to receive support',
+      'Host weekly group counseling and peer support sessions',
+      'Provide a safe, welcoming environment for children while mothers undergo training',
+      'Deliver community relief supplies, hygiene kits, and guidance directly to mothers'
     ],
-    impact: 'A permanent office reduces overhead costs spent on temporary venues, allowing more resources to flow directly to families. It also builds community trust through visible, lasting presence.',
-    progress: 45,
+    impact: 'Strengthens community bonds, reduces isolation among single mothers and widows, and creates a local network where families look out for one another.',
+    progress: 75,
   },
   {
-    id: 'shelter',
-    title: 'Domestic Violence Shelter',
+    id: 'empowerment-equipment',
+    title: 'Vocational Equipment & Enterprise Initiative',
     image: 'shelter',
-    summary: 'A safe, confidential refuge for women and children fleeing abuse — combining housing with counseling and legal support.',
+    imgSrc: imgProjectShelter,
+    summary: 'Providing start-up enterprise equipment, baking ovens, and tools to help women establish independent businesses.',
     description:
-      'Too many women in our communities have nowhere safe to go when violence enters their homes. This shelter will provide temporary housing, trauma counseling, legal aid referrals, and a pathway to independence for survivors and their children, in a secure and confidential environment.',
+      'To build lasting independence, we equip women with vocational skills and the actual physical assets required to launch micro-enterprises. From sewing machines to commercial baking ovens, this initiative funds and distributes work equipment to help graduates start generating immediate income and support their households.',
     goals: [
-      'Construct or renovate a secure facility with private living quarters',
-      'Partner with counselors and legal aid organizations for holistic support',
-      'Establish a 24-hour intake and crisis response protocol',
+      'Fund and distribute baking ovens, catering gear, and sewing machinery to trained women',
+      'Conduct practical, asset-based business workshops to ensure long-term usage',
+      'Establish a mentoring network connecting new business owners with experienced mentors'
     ],
-    impact: 'Survivors gain immediate safety, professional support, and the practical resources needed to rebuild independent lives — breaking cycles of abuse for the next generation.',
-    progress: 25,
+    impact: 'Graduates transition from relying on aid to running self-sustaining enterprises, creating financial security and jobs in their neighborhoods.',
+    progress: 60,
   },
 ]
 
@@ -188,6 +196,10 @@ export const galleryItems = [
   { id: 3, category: 'Community Impact', title: 'Educational Support Program', color: 'from-purple-300 to-purple-500', image: imgGallery3 },
   { id: 4, category: 'Outreach Activities', title: 'School Children Assistance', color: 'from-gold-200 to-gold-400', image: imgGallery4 },
   { id: 5, category: 'Community Impact', title: 'Nurturing Future Generations', color: 'from-purple-500 to-purple-700', image: imgGallery5 },
+  { id: 6, category: 'Programs', title: 'Laptop Donation — Digital Education Initiative', color: 'from-emerald-400 to-emerald-600', image: imgGalleryLaptop },
+  { id: 7, category: 'Outreach Activities', title: 'Community Gathering & Women Support Session', color: 'from-gold-400 to-gold-600', image: imgGalleryCommunity },
+  { id: 8, category: 'Community Impact', title: 'Bonds of Sisterhood — Faith & Friendship', color: 'from-purple-300 to-purple-500', image: imgGallerySisterhood },
+  { id: 9, category: 'Programs', title: 'School Uniforms for Sponsored Children', color: 'from-emerald-300 to-emerald-500', image: imgGallerySchool },
 ]
 
 export const testimonials = [

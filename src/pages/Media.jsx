@@ -4,48 +4,9 @@ import { FaXmark, FaPlay, FaPenToSquare } from 'react-icons/fa6'
 import PageHero from '../components/common/PageHero'
 import SectionHeading from '../components/common/SectionHeading'
 import Reveal from '../components/common/Reveal'
+import ImageLightbox from '../components/common/ImageLightbox'
 import { galleryCategories, galleryItems, testimonials } from '../data/content'
-
-function Lightbox({ item, onClose }) {
-  if (!item) return null
-  return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[100] bg-purple-900/95 flex items-center justify-center p-6"
-        onClick={onClose}
-        role="dialog"
-        aria-modal="true"
-        aria-label={item.title}
-      >
-        <button
-          onClick={onClose}
-          aria-label="Close image preview"
-          className="absolute top-6 right-6 text-white/80 hover:text-gold transition-colors"
-        >
-          <FaXmark size={32} />
-        </button>
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          onClick={(e) => e.stopPropagation()}
-          className="max-w-2xl w-full"
-        >
-          <div className="relative aspect-video rounded-2xl overflow-hidden flex items-end p-8">
-            <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-purple-900/40" />
-            <h3 className="relative z-10 text-white font-display text-2xl font-semibold">{item.title}</h3>
-          </div>
-          <p className="text-gold-200 text-sm mt-4 uppercase tracking-wide font-medium">
-            {item.category}
-          </p>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  )
-}
+import heroMedia from '../assets/hero_media_1783098706556.png'
 
 export default function Media() {
   const [activeCategory, setActiveCategory] = useState('All')
@@ -123,6 +84,7 @@ export default function Media() {
         eyebrow="Media"
         title="Moments from the field"
         description="Photos from our outreach programs, events, and the communities we walk alongside."
+        image={heroMedia}
       />
 
       {/* Photo Gallery */}
@@ -172,7 +134,7 @@ export default function Media() {
         </div>
       </section>
 
-      <Lightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
+      <ImageLightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
 
 
       {/* Testimonials */}
@@ -183,7 +145,7 @@ export default function Media() {
           <div className="grid lg:grid-cols-3 gap-10 mt-12">
             {/* Left Column: Testimonial List (spans 2 columns on large screens) */}
             <div className="lg:col-span-2 space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 {(showAllTestimonials ? localTestimonials : localTestimonials.slice(0, 4)).map((t, i) => (
                   <Reveal key={`${t.name}-${i}`} delay={(i % 2) * 0.1}>
                     <div className={`bg-purple-50/40 rounded-2xl p-8 h-full flex flex-col justify-between border transition-all duration-300 ${

@@ -5,6 +5,7 @@ import Reveal from '../components/common/Reveal'
 import { SimpleNeedCard, NumberedImpactCard } from '../components/common/Cards'
 import { FaArrowRight } from 'react-icons/fa6'
 import { needsCategories, donationImpact } from '../data/content'
+import heroNeeds from '../assets/hero_needs_1783098686482.png'
 
 export default function Needs() {
   return (
@@ -13,6 +14,7 @@ export default function Needs() {
         eyebrow="Our Needs"
         title="What our communities need most right now"
         description="Every gift, large or small, goes directly toward one of the urgent needs below. Here's exactly how supporters can help."
+        image={heroNeeds}
       />
 
       {/* Education Support */}
