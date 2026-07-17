@@ -8,8 +8,8 @@ import { offices } from '../data/content'
 function OfficeCard({ office, delay }) {
   return (
     <Reveal delay={delay}>
-      <div className="bg-white rounded-2xl p-7 shadow-card h-full border border-purple-50">
-        <h3 className="font-display font-semibold text-xl text-purple-900 mb-4">
+      <div className="bg-white rounded-2xl p-7 shadow-card h-full border border-green-50">
+        <h3 className="font-display font-semibold text-xl text-green-900 mb-4">
           {office.country}
         </h3>
         <div className="space-y-3 text-sm text-ink/75">
@@ -19,13 +19,13 @@ function OfficeCard({ office, delay }) {
           </p>
           <p className="flex items-center gap-3">
             <FaPhone className="text-gold-500 shrink-0" />
-            <a href={`tel:${office.phone.replace(/[^+\d]/g, '')}`} className="hover:text-purple">
+            <a href={`tel:${office.phone.replace(/[^+\d]/g, '')}`} className="hover:text-green">
               {office.phone}
             </a>
           </p>
           <p className="flex items-center gap-3">
             <FaEnvelope className="text-gold-500 shrink-0" />
-            <a href={`mailto:${office.email}`} className="hover:text-purple">
+            <a href={`mailto:${office.email}`} className="hover:text-green">
               {office.email}
             </a>
           </p>
@@ -104,8 +104,8 @@ export default function Contact() {
                 Fill out the form and our team will respond within 2–3 business days.
               </p>
             </div>
-            <div className="mt-6 md:mt-0 pt-6 border-t border-purple-100">
-              <h4 className="font-display font-semibold text-purple-900 mb-3">Connect With Us</h4>
+            <div className="mt-6 md:mt-0 pt-6 border-t border-green-100">
+              <h4 className="font-display font-semibold text-green-900 mb-3">Connect With Us</h4>
               <p className="text-sm text-ink/65 mb-4 font-body">Follow our journey and see the direct impact of your support.</p>
               <div className="flex gap-3">
                 {[
@@ -119,7 +119,7 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Connect with us on ${label}`}
-                    className="w-10 h-10 rounded-full bg-purple-50 text-purple hover:bg-gold hover:text-purple-900 flex items-center justify-center transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-green-50 text-green hover:bg-gold hover:text-green-900 flex items-center justify-center transition-colors duration-300"
                   >
                     <Icon size={16} />
                   </a>
@@ -130,9 +130,9 @@ export default function Contact() {
 
           <Reveal delay={0.1}>
             {submitted ? (
-              <div className="bg-purple-50 rounded-2xl p-8 flex flex-col items-center text-center">
+              <div className="bg-green-50 rounded-2xl p-8 flex flex-col items-center text-center">
                 <FaCircleCheck className="text-gold-500 text-4xl mb-4" />
-                <h3 className="font-display font-semibold text-xl text-purple-900 mb-2">
+                <h3 className="font-display font-semibold text-xl text-green-900 mb-2">
                   Message sent successfully
                 </h3>
                 <p className="text-ink/70 text-sm">
@@ -148,7 +148,7 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5" noValidate>
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-purple-900 mb-1.5">
+                  <label htmlFor="name" className="block text-sm font-medium text-green-900 mb-1.5">
                     Full Name
                   </label>
                   <input
@@ -160,8 +160,8 @@ export default function Contact() {
                     aria-invalid={!!errors.name}
                     aria-describedby={errors.name ? 'name-error' : undefined}
                     className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.name ? 'border-red-400' : 'border-purple-100'
-                    } focus:border-purple outline-none transition-colors`}
+                      errors.name ? 'border-red-400' : 'border-green-100'
+                    } focus:border-green outline-none transition-colors`}
                     placeholder="Your name"
                   />
                   {errors.name && (
@@ -172,7 +172,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-purple-900 mb-1.5">
+                  <label htmlFor="email" className="block text-sm font-medium text-green-900 mb-1.5">
                     Email
                   </label>
                   <input
@@ -184,8 +184,8 @@ export default function Contact() {
                     aria-invalid={!!errors.email}
                     aria-describedby={errors.email ? 'email-error' : undefined}
                     className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.email ? 'border-red-400' : 'border-purple-100'
-                    } focus:border-purple outline-none transition-colors`}
+                      errors.email ? 'border-red-400' : 'border-green-100'
+                    } focus:border-green outline-none transition-colors`}
                     placeholder="jane@example.com"
                   />
                   {errors.email && (
@@ -196,7 +196,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-purple-900 mb-1.5">
+                  <label htmlFor="phone" className="block text-sm font-medium text-green-900 mb-1.5">
                     Phone Number
                   </label>
                   <input
@@ -208,8 +208,8 @@ export default function Contact() {
                     aria-invalid={!!errors.phone}
                     aria-describedby={errors.phone ? 'phone-error' : undefined}
                     className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.phone ? 'border-red-400' : 'border-purple-100'
-                    } focus:border-purple outline-none transition-colors`}
+                      errors.phone ? 'border-red-400' : 'border-green-100'
+                    } focus:border-green outline-none transition-colors`}
                     placeholder="+234 800 000 0000"
                   />
                   {errors.phone && (
@@ -220,7 +220,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-purple-900 mb-1.5">
+                  <label htmlFor="message" className="block text-sm font-medium text-green-900 mb-1.5">
                     Message
                   </label>
                   <textarea
@@ -232,8 +232,8 @@ export default function Contact() {
                     aria-invalid={!!errors.message}
                     aria-describedby={errors.message ? 'message-error' : undefined}
                     className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.message ? 'border-red-400' : 'border-purple-100'
-                    } focus:border-purple outline-none transition-colors resize-none`}
+                      errors.message ? 'border-red-400' : 'border-green-100'
+                    } focus:border-green outline-none transition-colors resize-none`}
                     placeholder="How can we help you?"
                   />
                   {errors.message && (

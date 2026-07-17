@@ -64,7 +64,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section 
-        className="relative overflow-hidden group min-h-[600px] md:min-h-[720px]"
+        className="relative overflow-hidden group min-h-[640px] md:min-h-[720px]"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={() => setIsPaused(true)}
@@ -82,7 +82,7 @@ export default function Home() {
           />
         </AnimatePresence>
 
-        <div className="container-page grid lg:grid-cols-2 gap-10 items-center min-h-[640px] md:min-h-[720px] py-12 md:py-0">
+        <div className="container-page grid lg:grid-cols-2 gap-10 items-start lg:items-center min-h-[640px] md:min-h-[720px] pt-24 pb-12 md:pt-28 lg:py-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -90,7 +90,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -24 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10"
+              className="relative z-10 mt-16 sm:mt-20 lg:mt-0"
             >
               <span className="eyebrow drop-shadow-md" style={{ color: '#ffffff' }}>Victoria-Alabaster International Women Ministry</span>
               <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl text-white mt-4 leading-[1.08] text-balance drop-shadow-md">
@@ -161,7 +161,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-purple-600/30 blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-green-600/30 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-emerald-700/20 blur-3xl pointer-events-none" />
       </section>
 
@@ -175,7 +175,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <span className="eyebrow">Who We Are</span>
-            <h2 className="font-display font-semibold text-3xl md:text-4xl text-purple-900 mt-3 leading-tight">
+            <h2 className="font-display font-semibold text-3xl md:text-4xl text-green-900 mt-3 leading-tight">
               A community of compassion, built for lasting impact
             </h2>
             <p className="mt-5 text-ink/75 leading-relaxed text-lg">
@@ -221,28 +221,28 @@ export default function Home() {
                 <div className="group bg-beige rounded-2xl overflow-hidden shadow-card hover:shadow-soft transition-shadow duration-300 h-full flex flex-col">
                   {/* Clickable image */}
                   <button
-                    className={`w-full overflow-hidden cursor-zoom-in focus:outline-none ${i === 1 ? 'bg-black/10' : ''}`}
-                    style={{ height: i === 1 ? 'auto' : '14rem' }}
+                    className="w-full overflow-hidden cursor-zoom-in focus:outline-none"
+                    style={{ height: '14rem' }}
                     onClick={() => setProjectLightbox({ image: projectImages[project.image], title: project.title })}
                     aria-label={`View full image: ${project.title}`}
                   >
                     <img
                       src={projectImages[project.image]}
                       alt={project.title}
-                      className={`w-full group-hover:scale-105 transition-transform duration-500 filter contrast-[1.03] brightness-[1.01] saturate-[1.02] ${
-                        i === 1 ? 'object-contain max-h-72' : 'h-full object-cover'
+                      className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-[1.03] brightness-[1.01] saturate-[1.02] ${
+                        i === 1 ? 'object-top' : ''
                       }`}
                       style={{ imageRendering: 'high-quality' }}
                     />
                   </button>
                   <div className="p-7 flex flex-col flex-grow">
-                    <h3 className="font-display font-semibold text-xl text-purple-900 mb-2">
+                    <h3 className="font-display font-semibold text-xl text-green-900 mb-2">
                       {project.title}
                     </h3>
                     <p className="text-sm text-ink/70 leading-relaxed flex-grow">{project.summary}</p>
                     <Link
                       to="/projects"
-                      className="inline-flex items-center gap-2 text-purple font-medium mt-5 text-sm hover:gap-3 transition-all"
+                      className="inline-flex items-center gap-2 text-green font-medium mt-5 text-sm hover:gap-3 transition-all"
                     >
                       Learn More <FaArrowRight size={13} />
                     </Link>
@@ -274,7 +274,7 @@ export default function Home() {
                   aria-label={`View image: ${item.title}`}
                 >
                   <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-purple-900/20 group-hover:bg-purple-900/50 transition-colors duration-300 flex items-end p-4">
+                  <div className="absolute inset-0 bg-green-900/20 group-hover:bg-green-900/50 transition-colors duration-300 flex items-end p-4">
                     <p className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                       {item.title}
                     </p>
@@ -294,7 +294,7 @@ export default function Home() {
       <ImageLightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
 
       {/* DONATION CTA */}
-      <section className="relative bg-purple-900 section-pad overflow-hidden">
+      <section className="relative bg-green-900 section-pad overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold/10 blur-3xl rounded-full" />
         <div className="container-page relative z-10 text-center max-w-2xl mx-auto">
           <Reveal>

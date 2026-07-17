@@ -6,7 +6,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-purple-900 text-white/85">
+    <footer className="bg-green-900 text-white/85">
       {/* Green accent strip */}
       <div className="h-1 w-full bg-gradient-to-r from-emerald-700 via-emerald-500 to-emerald-700" />
       <div className="container-page py-14 md:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">

@@ -42,7 +42,7 @@ export default function ImageLightbox({ item, onClose }) {
           <button
             onClick={onClose}
             aria-label="Close image preview"
-            className="absolute top-5 right-5 z-10 w-11 h-11 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-gold hover:text-purple-900 transition-colors duration-200"
+            className="absolute top-5 right-5 z-10 w-11 h-11 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-gold hover:text-green-900 transition-colors duration-200"
           >
             <FaXmark size={22} />
           </button>

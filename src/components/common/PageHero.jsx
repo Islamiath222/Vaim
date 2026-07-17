@@ -3,16 +3,16 @@ import { ThreadDivider } from './ThreadMotif'
 
 export default function PageHero({ eyebrow, title, description, image }) {
   return (
-    <section className="relative bg-purple-900 pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <section className="relative bg-green-900 pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {image ? (
         <div className="absolute inset-0 z-0">
           <img src={image} alt={title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-purple-900/75 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-purple-900/40" />
+          <div className="absolute inset-0 bg-green-900/75 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-t from-green-900/90 to-green-900/40" />
         </div>
       ) : (
         <>
-          <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-purple-600/40 blur-3xl" />
+          <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-green-600/40 blur-3xl" />
           <div className="absolute bottom-0 -left-20 w-64 h-64 rounded-full bg-gold/10 blur-3xl" />
         </>
       )}

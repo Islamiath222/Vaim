@@ -6,8 +6,8 @@ const variants = {
     <svg viewBox="0 0 600 600" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#8F61C8" />
-          <stop offset="100%" stopColor="#3D2761" />
+          <stop offset="0%" stopColor="#4CAF50" />
+          <stop offset="100%" stopColor="#0B301B" />
         </linearGradient>
       </defs>
       <rect width="600" height="600" fill="url(#heroGrad)" />
@@ -25,33 +25,33 @@ const variants = {
   ),
   community: (
     <svg viewBox="0 0 500 400" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-      <rect width="500" height="400" fill="#F4EEFC" />
-      <circle cx="120" cy="150" r="50" fill="#5B3A8E" />
-      <path d="M50 320 Q120 230 190 320 L190 360 L50 360 Z" fill="#5B3A8E" />
+      <rect width="500" height="400" fill="#E8F5E9" />
+      <circle cx="120" cy="150" r="50" fill="#0F5132" />
+      <path d="M50 320 Q120 230 190 320 L190 360 L50 360 Z" fill="#0F5132" />
       <circle cx="260" cy="170" r="42" fill="#D4AF37" />
       <path d="M200 320 Q260 250 320 320 L320 355 L200 355 Z" fill="#D4AF37" />
-      <circle cx="390" cy="155" r="48" fill="#AE87DC" />
-      <path d="M325 320 Q390 235 455 320 L455 360 L325 360 Z" fill="#AE87DC" />
+      <circle cx="390" cy="155" r="48" fill="#81C784" />
+      <path d="M325 320 Q390 235 455 320 L455 360 L325 360 Z" fill="#81C784" />
     </svg>
   ),
   office: (
     <svg viewBox="0 0 500 350" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-      <rect width="500" height="350" fill="#2E1D49" />
-      <rect x="100" y="80" width="300" height="220" fill="#5B3A8E" />
+      <rect width="500" height="350" fill="#072112" />
+      <rect x="100" y="80" width="300" height="220" fill="#0F5132" />
       <rect x="130" y="120" width="50" height="60" fill="#D4AF37" opacity="0.85" />
       <rect x="225" y="120" width="50" height="60" fill="#F8F4EE" opacity="0.85" />
       <rect x="320" y="120" width="50" height="60" fill="#D4AF37" opacity="0.85" />
       <rect x="130" y="210" width="50" height="60" fill="#F8F4EE" opacity="0.7" />
-      <rect x="225" y="210" width="50" height="90" fill="#1F1432" />
+      <rect x="225" y="210" width="50" height="90" fill="#030D07" />
       <rect x="320" y="210" width="50" height="60" fill="#F8F4EE" opacity="0.7" />
-      <polygon points="80,80 250,20 420,80" fill="#1F1432" />
+      <polygon points="80,80 250,20 420,80" fill="#030D07" />
     </svg>
   ),
   shelter: (
     <svg viewBox="0 0 500 350" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-      <rect width="500" height="350" fill="#3D2761" />
-      <path d="M100 280 L100 160 L250 70 L400 160 L400 280 Z" fill="#8F61C8" />
-      <rect x="220" y="190" width="60" height="90" fill="#1F1432" />
+      <rect width="500" height="350" fill="#0B301B" />
+      <path d="M100 280 L100 160 L250 70 L400 160 L400 280 Z" fill="#4CAF50" />
+      <rect x="220" y="190" width="60" height="90" fill="#030D07" />
       <rect x="140" y="200" width="40" height="40" fill="#D4AF37" opacity="0.85" />
       <rect x="320" y="200" width="40" height="40" fill="#D4AF37" opacity="0.85" />
       <circle cx="250" cy="100" r="55" fill="#D4AF37" opacity="0.2" />
@@ -60,17 +60,17 @@ const variants = {
   ),
   founder: (
     <svg viewBox="0 0 400 480" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-      <rect width="400" height="480" fill="#F4EEFC" />
-      <circle cx="200" cy="170" r="80" fill="#5B3A8E" />
-      <path d="M70 460 Q200 290 330 460 Z" fill="#5B3A8E" />
-      <circle cx="200" cy="160" r="60" fill="#E6D9F5" />
+      <rect width="400" height="480" fill="#E8F5E9" />
+      <circle cx="200" cy="170" r="80" fill="#0F5132" />
+      <path d="M70 460 Q200 290 330 460 Z" fill="#0F5132" />
+      <circle cx="200" cy="160" r="60" fill="#C8E6C9" />
       <path d="M150 440 Q200 330 250 440 Z" fill="#D4AF37" opacity="0.8" />
     </svg>
   ),
   abstract1: (
     <svg viewBox="0 0 400 300" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-      <rect width="400" height="300" fill="#5B3A8E" />
-      <circle cx="320" cy="60" r="70" fill="#8F61C8" opacity="0.6" />
+      <rect width="400" height="300" fill="#0F5132" />
+      <circle cx="320" cy="60" r="70" fill="#4CAF50" opacity="0.6" />
       <circle cx="60" cy="240" r="90" fill="#D4AF37" opacity="0.25" />
     </svg>
   ),

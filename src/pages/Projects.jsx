@@ -28,18 +28,20 @@ export default function Projects() {
                   <img 
                     src={project.imgSrc} 
                     alt={project.title} 
-                    className="w-full h-full object-cover filter contrast-[1.03] brightness-[1.01] saturate-[1.02]" 
+                    className={`w-full h-full object-cover filter contrast-[1.03] brightness-[1.01] saturate-[1.02] ${
+                      i === 1 ? 'object-top' : ''
+                    }`} 
                     style={{ imageRendering: 'high-quality' }}
                   />
                 </div>
                 <div>
                   <span className="eyebrow">Ongoing Project</span>
-                  <h2 className="font-display font-semibold text-3xl text-purple-900 mt-3 mb-4">
+                  <h2 className="font-display font-semibold text-3xl text-green-900 mt-3 mb-4">
                     {project.title}
                   </h2>
                   <p className="text-ink/75 leading-relaxed mb-6">{project.description}</p>
 
-                  <h4 className="font-semibold text-purple-900 mb-3 text-sm uppercase tracking-wide">
+                  <h4 className="font-semibold text-green-900 mb-3 text-sm uppercase tracking-wide">
                     Goals
                   </h4>
                   <ul className="space-y-2.5 mb-6">
@@ -51,7 +53,7 @@ export default function Projects() {
                     ))}
                   </ul>
 
-                  <h4 className="font-semibold text-purple-900 mb-2 text-sm uppercase tracking-wide">
+                  <h4 className="font-semibold text-green-900 mb-2 text-sm uppercase tracking-wide">
                     Expected Impact
                   </h4>
                   <p className="text-sm text-ink/75 leading-relaxed mb-6">{project.impact}</p>
@@ -74,7 +76,7 @@ export default function Projects() {
             {futureInitiatives.map((initiative, i) => (
               <Reveal key={initiative.title} delay={i * 0.08}>
                 <div className="bg-white rounded-2xl p-7 h-full shadow-card border-t-4 border-gold">
-                  <h3 className="font-display font-semibold text-lg text-purple-900 mb-2">
+                  <h3 className="font-display font-semibold text-lg text-green-900 mb-2">
                     {initiative.title}
                   </h3>
                   <p className="text-sm text-ink/70 leading-relaxed">{initiative.description}</p>

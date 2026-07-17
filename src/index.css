@@ -46,7 +46,7 @@ select:focus-visible {
   background: #F8F4EE;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #5B3A8E 0%, #0F5132 100%);
+  background: linear-gradient(180deg, #0F5132 0%, #D4AF37 100%);
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -77,11 +77,11 @@ select:focus-visible {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 bg-purple text-white font-medium px-7 py-3.5 rounded-full shadow-soft hover:bg-purple-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+  @apply inline-flex items-center justify-center gap-2 bg-green text-white font-medium px-7 py-3.5 rounded-full shadow-soft hover:bg-green-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
 }
 
 .btn-gold {
-  @apply inline-flex items-center justify-center gap-2 bg-gold text-purple-900 font-semibold px-7 py-3.5 rounded-full shadow-soft hover:bg-gold-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+  @apply inline-flex items-center justify-center gap-2 bg-gold text-green-900 font-semibold px-7 py-3.5 rounded-full shadow-soft hover:bg-gold-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
 }
 
 .btn-green {
@@ -89,7 +89,7 @@ select:focus-visible {
 }
 
 .btn-outline {
-  @apply inline-flex items-center justify-center gap-2 border-2 border-purple text-purple font-medium px-7 py-3.5 rounded-full hover:bg-purple hover:text-white transition-all duration-300;
+  @apply inline-flex items-center justify-center gap-2 border-2 border-green text-green font-medium px-7 py-3.5 rounded-full hover:bg-green hover:text-white transition-all duration-300;
 }
 
 .green-left-accent {
@@ -98,7 +98,7 @@ select:focus-visible {
 }
 
 .btn-outline-light {
-  @apply inline-flex items-center justify-center gap-2 border-2 border-white text-white font-medium px-7 py-3.5 rounded-full hover:bg-white hover:text-purple transition-all duration-300;
+  @apply inline-flex items-center justify-center gap-2 border-2 border-white text-white font-medium px-7 py-3.5 rounded-full hover:bg-white hover:text-green transition-all duration-300;
 }
 
 .eyebrow {

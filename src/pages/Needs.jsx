@@ -5,7 +5,7 @@ import Reveal from '../components/common/Reveal'
 import { SimpleNeedCard, NumberedImpactCard } from '../components/common/Cards'
 import { FaArrowRight } from 'react-icons/fa6'
 import { needsCategories, donationImpact } from '../data/content'
-import heroNeeds from '../assets/hero_needs_1783098686482.png'
+import heroNeeds from '../assets/needs_illustration_hero.jpg'
 
 export default function Needs() {
   return (
@@ -54,7 +54,7 @@ export default function Needs() {
       </section>
 
       {/* How Donations Help - infographic style */}
-      <section className="section-pad bg-purple-900">
+      <section className="section-pad bg-green-900">
         <div className="container-page">
           <SectionHeading
             eyebrow="Transparency"

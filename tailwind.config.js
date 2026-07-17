@@ -4,18 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        purple: {
-          DEFAULT: '#5B3A8E',
-          50: '#F4EEFC',
-          100: '#E6D9F5',
-          200: '#CDB3EB',
-          300: '#AE87DC',
-          400: '#8F61C8',
-          500: '#5B3A8E',
-          600: '#4C3079',
-          700: '#3D2761',
-          800: '#2E1D49',
-          900: '#1F1432',
+        green: {
+          DEFAULT: '#0F5132',
+          50: '#E8F5E9',
+          100: '#C8E6C9',
+          200: '#A5D6A7',
+          300: '#81C784',
+          400: '#4CAF50',
+          500: '#0F5132',
+          600: '#1B5E20',
+          700: '#0B301B',
+          800: '#072112',
+          900: '#030D07',
         },
         gold: {
           DEFAULT: '#D4AF37',
@@ -26,14 +26,6 @@ export default {
           400: '#D4AF37',
           500: '#B8932A',
           600: '#94761F',
-        },
-        green: {
-          DEFAULT: '#0F5132',
-          50: '#E8F5E9',
-          100: '#C8E6C9',
-          600: '#1B5E20',
-          800: '#0F5132',
-          900: '#0A3622',
         },
         beige: '#F8F4EE',
         ink: '#333333',
@@ -46,7 +38,7 @@ export default {
         'thread-divider': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20'%3E%3Cpath d='M0 10 Q 50 0, 100 10 T 200 10' stroke='%23D4AF37' fill='none' stroke-width='2'/%3E%3C/svg%3E\")",
       },
       boxShadow: {
-        soft: '0 10px 40px -10px rgba(91, 58, 142, 0.15)',
+        soft: '0 10px 40px -10px rgba(15, 81, 50, 0.15)',
         card: '0 8px 30px -8px rgba(51, 51, 51, 0.12)',
       },
       borderRadius: {

@@ -68,7 +68,7 @@ export default function Layout() {
       <ScrollToTop />
       <ScrollReveal />
       <Navbar />
-      <main className="flex-grow pt-26">
+      <main className="flex-grow">
         <Outlet />
       </main>
       <Footer />

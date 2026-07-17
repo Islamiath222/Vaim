@@ -5,8 +5,8 @@ export default function NotFound() {
   return (
     <section className="min-h-[70vh] flex items-center justify-center bg-beige px-5">
       <div className="text-center max-w-md">
-        <span className="font-display text-7xl font-semibold text-purple-200">404</span>
-        <h1 className="font-display text-2xl md:text-3xl font-semibold text-purple-900 mt-4">
+        <span className="font-display text-7xl font-semibold text-green-200">404</span>
+        <h1 className="font-display text-2xl md:text-3xl font-semibold text-green-900 mt-4">
           Page not found
         </h1>
         <p className="text-ink/70 mt-3 leading-relaxed">

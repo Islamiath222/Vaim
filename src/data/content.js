@@ -12,7 +12,7 @@ import imgGallerySisterhood from '../assets/gallery_sisterhood.jpg'
 import imgGallerySchool from '../assets/gallery_school_uniform.jpg'
 import imgNeedFood from '../assets/need_food_supplies_new.jpg'
 import imgNeedClothing from '../assets/need_clothing.png'
-import imgNeedEssentials from '../assets/need_essentials.png'
+import imgNeedEssentials from '../assets/need_essentials_new.jpg'
 import imgProjectOffice from '../assets/project_community_center.jpg'
 import imgProjectShelter from '../assets/project_empowerment.jpg'
 
@@ -191,14 +191,14 @@ export const offices = [
 export const galleryCategories = ['All', 'Events', 'Outreach Activities', 'Programs', 'Community Impact']
 
 export const galleryItems = [
-  { id: 1, category: 'Outreach Activities', title: 'Food & Supply Distribution', color: 'from-purple-400 to-purple-600', image: imgGallery1 },
+  { id: 1, category: 'Outreach Activities', title: 'Food & Supply Distribution', color: 'from-green-400 to-green-600', image: imgGallery1 },
   { id: 2, category: 'Programs', title: 'Empowering Small Businesses', color: 'from-gold-300 to-gold-500', image: imgGallery2 },
-  { id: 3, category: 'Community Impact', title: 'Educational Support Program', color: 'from-purple-300 to-purple-500', image: imgGallery3 },
+  { id: 3, category: 'Community Impact', title: 'Educational Support Program', color: 'from-green-300 to-green-500', image: imgGallery3 },
   { id: 4, category: 'Outreach Activities', title: 'School Children Assistance', color: 'from-gold-200 to-gold-400', image: imgGallery4 },
-  { id: 5, category: 'Community Impact', title: 'Nurturing Future Generations', color: 'from-purple-500 to-purple-700', image: imgGallery5 },
+  { id: 5, category: 'Community Impact', title: 'Nurturing Future Generations', color: 'from-green-500 to-green-700', image: imgGallery5 },
   { id: 6, category: 'Programs', title: 'Laptop Donation — Digital Education Initiative', color: 'from-emerald-400 to-emerald-600', image: imgGalleryLaptop },
   { id: 7, category: 'Outreach Activities', title: 'Community Gathering & Women Support Session', color: 'from-gold-400 to-gold-600', image: imgGalleryCommunity },
-  { id: 8, category: 'Community Impact', title: 'Bonds of Sisterhood — Faith & Friendship', color: 'from-purple-300 to-purple-500', image: imgGallerySisterhood },
+  { id: 8, category: 'Community Impact', title: 'Bonds of Sisterhood — Faith & Friendship', color: 'from-green-300 to-green-500', image: imgGallerySisterhood },
   { id: 9, category: 'Programs', title: 'School Uniforms for Sponsored Children', color: 'from-emerald-300 to-emerald-500', image: imgGallerySchool },
 ]
 

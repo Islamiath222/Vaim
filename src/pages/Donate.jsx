@@ -17,7 +17,7 @@ export default function Donate() {
 
       {/* Welcoming message + form */}
       <section className="section-pad bg-beige relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-green-600/5 blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gold/10 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="container-page relative z-10">
@@ -26,7 +26,7 @@ export default function Donate() {
             {/* Left: message */}
             <Reveal className="flex flex-col justify-center">
               <span className="eyebrow">Give Generously</span>
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-purple-900 mt-3 leading-tight">
+              <h2 className="font-display font-bold text-3xl md:text-4xl text-green-900 mt-3 leading-tight">
                 Every gift makes a difference
               </h2>
               <p className="mt-5 text-ink/75 leading-relaxed text-lg font-body">
@@ -69,7 +69,7 @@ export default function Donate() {
               <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-4">
                 Coming Soon
               </span>
-              <h3 className="font-display font-bold text-xl text-purple-900 mb-3">PayPal Donations</h3>
+              <h3 className="font-display font-bold text-xl text-green-900 mb-3">PayPal Donations</h3>
               <p className="text-ink/65 text-sm leading-relaxed font-body max-w-md mx-auto">
                 We are currently completing our U.S. registration process. Once finalized, we will activate
                 PayPal donations to make giving easier for our international supporters. Thank you for your patience!
@@ -80,7 +80,7 @@ export default function Donate() {
       </section>
 
       {/* Bible Verse */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-900 to-purple-800 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-green-900 to-green-800 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10 pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 50%, white 1px, transparent 1px)', backgroundSize: '60px 60px' }}
