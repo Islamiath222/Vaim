@@ -22,12 +22,12 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-card h-16 sm:h-20' : 'bg-white/90 backdrop-blur-sm h-20 sm:h-24'
+        scrolled ? 'bg-white/95 backdrop-blur-md shadow-card h-20 sm:h-24' : 'bg-white/90 backdrop-blur-sm h-24 sm:h-28'
       }`}
     >
       <nav className="w-full flex items-center justify-between h-full py-1 pl-0 pr-5 sm:pr-8 lg:pr-12">
-        <Link to="/" className="flex items-center group shrink-0 justify-start -ml-2 sm:-ml-7 lg:-ml-9 max-w-[160px] sm:max-w-[200px] lg:max-w-none" onClick={() => setIsOpen(false)}>
-          <Logo className="h-12 sm:h-16 lg:h-20 object-left w-auto max-w-full" />
+        <Link to="/" className="flex items-center h-full group shrink-0 justify-start -ml-4 sm:-ml-8 lg:-ml-12 max-w-[240px] sm:max-w-[320px] lg:max-w-none" onClick={() => setIsOpen(false)}>
+          <Logo className="h-full object-left w-auto max-w-full" />
         </Link>
 
         {/* Desktop Nav */}
