@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaLocationDot, FaPhone, FaEnvelope, FaCircleCheck, FaPaperPlane, FaFacebookF, FaInstagram, FaXTwitter } from 'react-icons/fa6'
+import { FaLocationDot, FaWhatsapp, FaEnvelope, FaCircleCheck, FaPaperPlane, FaFacebookF, FaInstagram, FaXTwitter } from 'react-icons/fa6'
 import PageHero from '../components/common/PageHero'
 import SectionHeading from '../components/common/SectionHeading'
 import Reveal from '../components/common/Reveal'
@@ -18,9 +18,8 @@ function OfficeCard({ office, delay }) {
             {office.address}
           </p>
           <p className="flex items-center gap-3">
-            <FaPhone className="text-gold-500 shrink-0" />
-            <a href={`tel:${office.phone.replace(/[^+\d]/g, '')}`} className="hover:text-green">
-              {office.phone}
+            <a href={`https://wa.me/${office.phone.replace(/[^\d]/g, '')}`} className="flex items-center gap-1 hover:text-green-200">
+              <FaWhatsapp className="text-gold-500 shrink-0" /> Contact us on WhatsApp
             </a>
           </p>
           <p className="flex items-center gap-3">

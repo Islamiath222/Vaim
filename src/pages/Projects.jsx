@@ -3,7 +3,7 @@ import SectionHeading from '../components/common/SectionHeading'
 import Reveal from '../components/common/Reveal'
 import { FaCircleCheck } from 'react-icons/fa6'
 import { projects, futureInitiatives } from '../data/content'
-import heroProjects from '../assets/hero_projects_1783098696615.png'
+import heroProjects from '../assets/hero_projects_objects.png'
 
 export default function Projects() {
   return (

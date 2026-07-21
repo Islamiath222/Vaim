@@ -57,7 +57,7 @@ src/
 
 | Token         | Hex       | Usage                          |
 |---------------|-----------|---------------------------------|
-| `purple`      | `#5B3A8E` | Primary — headers, buttons, nav |
+| `green`       | `#0F5132` | Primary — headers, buttons, nav |
 | `gold`        | `#D4AF37` | Secondary — accents, CTAs       |
 | `beige`       | `#F8F4EE` | Section backgrounds             |
 | `ink`         | `#333333` | Body text                       |

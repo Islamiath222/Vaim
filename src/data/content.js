@@ -178,13 +178,13 @@ export const offices = [
     country: 'Nigeria Office',
     address: ' Akure Lagos, Nigeria',
     phone: '+234 80 XXXXXXXXX',
-    email: 'info@placeholder.com',
+    email: 'victoriaalabaster007@gmail.com',
   },
   {
     country: 'USA Office',
-    address: 'XXXXXXXXXX, USA',
-    phone: '+1 XXXXXXXXX',
-    email: 'info@placeholder.com',
+    address: 'Texas, USA',
+    phone: '+1 4438588441',
+    email: 'victoriaalabaster007@gmail.com',
   },
 ]
 

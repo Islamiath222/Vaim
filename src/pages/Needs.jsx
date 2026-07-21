@@ -5,7 +5,7 @@ import Reveal from '../components/common/Reveal'
 import { SimpleNeedCard, NumberedImpactCard } from '../components/common/Cards'
 import { FaArrowRight } from 'react-icons/fa6'
 import { needsCategories, donationImpact } from '../data/content'
-import heroNeeds from '../assets/needs_illustration_hero.jpg'
+import heroNeeds from '../assets/donation_needed_v2.png'
 
 export default function Needs() {
   return (

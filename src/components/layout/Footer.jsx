@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaHeart, FaFacebookF, FaInstagram, FaXTwitter, FaLocationDot, FaPhone, FaEnvelope } from 'react-icons/fa6'
+import { FaHeart, FaFacebookF, FaInstagram, FaXTwitter, FaLocationDot, FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa6'
 import { navLinks, offices } from '../../data/content'
 import Logo from './Logo'
 export default function Footer() {
@@ -71,7 +71,9 @@ export default function Footer() {
                   <FaLocationDot className="mt-1 shrink-0" /> {office.address}
                 </p>
                 <p className="flex items-center gap-2 text-white/65">
-                  <FaPhone className="shrink-0" /> {office.phone}
+                  <a href={`https://wa.me/${office.phone.replace(/[^\d]/g, '')}`} className="flex items-center gap-1 hover:text-green-200">
+                    <FaWhatsapp className="shrink-0" /> Contact us on WhatsApp
+                  </a>
                 </p>
                 <p className="flex items-center gap-2 text-white/65">
                   <FaEnvelope className="shrink-0" /> {office.email}
