@@ -3,7 +3,6 @@ import SectionHeading from '../components/common/SectionHeading'
 import Reveal from '../components/common/Reveal'
 import DonationForm from '../components/donate/DonationForm'
 import heroDonate from '../assets/donate_hero_v3.jpg'
-import { FaPaypal } from 'react-icons/fa6'
 
 export default function Donate() {
   return (
@@ -58,26 +57,7 @@ export default function Donate() {
         </div>
       </section>
 
-      {/* PayPal Coming Soon */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container-page max-w-2xl mx-auto">
-          <Reveal>
-            <div className="bg-white rounded-2xl border-2 border-dashed border-blue-200 p-8 md:p-10 text-center shadow-sm">
-              <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-5">
-                <FaPaypal className="text-3xl text-[#003087]" />
-              </div>
-              <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-4">
-                Coming Soon
-              </span>
-              <h3 className="font-display font-bold text-xl text-green-900 mb-3">PayPal Donations</h3>
-              <p className="text-ink/65 text-sm leading-relaxed font-body max-w-md mx-auto">
-                We are currently completing our U.S. registration process. Once finalized, we will activate
-                PayPal donations to make giving easier for our international supporters. Thank you for your patience!
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+
 
       {/* Bible Verse */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-green-900 to-green-800 relative overflow-hidden">
